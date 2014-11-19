@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0;">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<script src="js/jquery-1.9.1.min.js"  type="text/javascript"></script>
+	<script src="js/script.js"  type="text/javascript"></script>
+	<script src="js/cssfx.js"></script><!-- Вставляет префиксы -->
+	<link rel="stylesheet" type="text/css" href="css/reset.css" ><!-- Сбрасывает стили по умолчанию-->
+	<![if !(IE 9) & !(IE 8)]>
+	<link rel="stylesheet" type="text/css" href="css/style.css" class="cssfx">
+	<![endif]>
+<!-- В данных браузерах лучше обойтись без cssfx -->
+<!--[if (IE 9) | (IE 8)]>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/ie8-9.css">
+<![endif]-->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="css/ie8.css">
+<![endif]-->
+
+<!--[if IE 9]>
+<style >
+.pas,.email
+{
+	margin-left:5px;
+}
+#radial
+{
+	box-shadow: 0px 0px 1200px 190px #ffffff;
+}
+</style>
+<![endif]-->
+
+<title>Форма авторизации</title>
+</head>
+<body class='bg'>
+	<div id="container">
+		<div id="preloader"></div>
+		<div id="error">
+			<span id="txt"></span>
+			<div id="exit"></div>
+		</div>
+		<div id="radial"></div>
+		<div id="all">
+			<div id='main-form' class="bie">
+				<div id="wrapper" class="bord1">
+					<div id='title'><h1>Login to Super Duper App</h1><hr id="login"></div>
+					<form action="" method="POST" id="form">
+					        <input  type='text' id="email" class='email v1' placeholder="E-mail" value="" /><br />
+					        <input  type='password' id="pas" class='pas v1' placeholder="Password" value="" /><br />
+					        <input  type="checkbox" name="opt" id="option">
+						    <label id="lab" for="option">Remember me on this computer</label>
+						    <input type='button' disabled value='Login'  id="go" class="blue"/>
+					</form>
+				</div>
+			</div>
+			<div id="forgot">
+			    <span id="static">Forgot your password?</span> 
+			    <a href="#" id="click" class="click1">Click here to reset it.</a>
+		  	</div>
+		</div>
+	</div>
+</body>
+</html>

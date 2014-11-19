@@ -1,0 +1,59 @@
+.placeIE
+{
+    padding-top:10px;
+}
+.pas,.email
+{
+	margin-left:10px;
+	height:25px;
+}
+
+#error
+{
+	background-color:rgb(255,255,255);
+}
+
+/*фон за формой */
+.bie
+{
+	background:0px 0px url('../images/iefon.png') no-repeat;	
+}
+.pie
+{
+	background:0px 0px url('../images/iefon2.png') no-repeat;	
+}
+
+#all
+{
+	margin-top:-589px;
+}
+
+
+#radial
+{	
+	width:800px;
+	height:800px;
+	display:block;
+	opacity:.29;
+	position:relative;
+	margin:0 auto;
+	margin-top:-48px;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=29)";
+	filter: alpha(opacity=29);
+	background:url('../images/shadow.png') no-repeat;
+}
+#main-form
+{ 
+	width:386px;
+	height:265px;
+	margin-left:-12px;
+}
+
+#wrapper
+{	
+	position:absolute;
+	width:360px;
+	margin-top:12px;
+	margin-left:13px;
+	height: 240px;
+}

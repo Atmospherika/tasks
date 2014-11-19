@@ -1,0 +1,281 @@
+body
+{
+
+	font:0.8em Arial, Helvetica, sans-serif;
+}
+/* Форма без ссылки внизу */
+#main-form
+{
+width:100%;
+}
+/* Вся форма вместе с ссылкой внизу */
+#all
+{
+margin: 175px auto 0px auto;
+opacity:0.99;
+width:360px;
+}
+#wrapper
+{
+	height:240px;	
+	background-color:white;	
+	border-radius: 0.3em/0.3em;
+}
+/* белый радиальный градиент за формой */
+#radial
+{
+border-radius: 200px;
+background: none;
+margin: 0 auto;
+position: absolute;
+margin-top: 300px;
+z-index: 0;
+width: 1px;
+box-shadow: 0px 0px 1200px 190px rgba(255, 255, 255, 0.35);
+height: 1px;
+margin-left: 50%;
+}
+form
+{	
+	display: table;
+	margin:0 auto;
+	margin-top:23px;
+}
+.pas,.email
+{	
+	margin-bottom: 18px;
+	width: 308px;
+	height: 35px;
+	padding-left:10px;
+	border: #bfc3c5 1px solid;
+	box-shadow: 0 0 0 4px #f2f5f7;
+	border-radius: 0.07em/0.07em;
+}
+
+#preloader
+{
+	background:url('../images/spif.gif') no-repeat;
+	width: 228px;
+	height: 15px;
+	display:none;
+	display:none;
+	position:absolute;	
+	margin-left: 42%;
+	margin-top:268px;
+
+}
+#error
+{	
+	position:absolute;
+	background-color:rgba(255,255,255,0.9);
+	height:50px;
+	width:100%;
+ 	border-bottom: 10px solid #eaeff3;
+ 	text-align: center;
+ 	box-shadow: 0px 0px 3px 1px #5d5d5d;
+	display: none;
+	
+}
+#txt
+{	margin-top: 16px;
+	color: #e34848;
+	font: bold 1.2em Arial;
+	display: inline-block; 
+	
+}
+/* label */
+#lab
+{
+margin: 5px 53px 0px 3px;
+color:#656565;
+display:inline-block;
+vertical-align: top;
+}
+/* кнопка отправки */
+#go
+{	
+	height:30px;
+	width: 70px;
+	border-radius: 2em/2em;
+	outline: none;
+	border: 1px solid #b8cbd2;
+	color:#527988;
+	font-weight: bold;
+	font-size: 0.9em;
+	margin-left:-5px;
+
+}
+#exit
+{
+	width:10px;
+	height:9px;
+	background:url('../images/exit.png') no-repeat;
+	margin-top: 22px;
+	margin-right: 20px;
+	float: right;
+}
+#exit:hover
+{	width:10px;
+	height:9px;
+	background:url('../images/exitH.png') no-repeat;
+}
+
+#title
+{
+	height:45px;
+    border-bottom: #bfc3c5 1px solid;
+ 	border-radius: 0.3em 0.3em 0em 0em;
+    background: linear-gradient(top, #ffffff, #ecf1f4);  
+ 	box-shadow: 0px 1px 3px -1px #c9c9c9;
+}
+
+#login
+{	
+	border: #f6f8f9 1px solid;
+	margin:0 auto;
+	margin-top: 10px;
+}
+
+#title h1
+{
+	font:normal bold 1em/100% Helvetica, Arial, serif;
+	text-align: center;
+	padding-top: 20px;
+	color:#555555;	
+}
+#forgot
+{
+	text-align: center;
+	margin-top: 27px;
+	text-shadow: 0px 1px 1px rgba(0,0,0,0.3);
+
+}
+#forgot #click
+{
+	text-decoration:none;
+}
+#forgot #static
+{
+	color:white;
+	
+}
+#container
+{
+	overflow:hidden;
+	width:100%;
+	position:absolute;
+	min-height:800px;
+	
+}
+
+/*изменяемые стили*/
+
+
+
+.blue /*кнопка голубая*/
+{	
+	 
+	box-shadow:0 2px 4px -3px #8d8d8d, 0 0 0 4px #f2f5f7;
+	border-radius: 2em/2em;
+	background-image: linear-gradient(top, #e5f1f6, #cfe6ee);
+
+
+}
+
+.blue:hover
+{
+	
+background-image: linear-gradient(top, #cfe6ee, #e5f1f6);
+}
+.blue:active
+{
+	
+background-image: linear-gradient(top, #cfe6ee, #e5f1f6);
+box-shadow: 0 0 0 4px #f2f5f7, inset 0px 6px 5px -7px #333;
+	
+}
+
+/*кнопка розовая*/
+
+.pink 
+{	
+	 
+	box-shadow:0 2px 4px -3px #8d8d8d, 0 0 0 4px #f2f5f7;
+	border-radius: 2em/2em;
+	background-image: linear-gradient(top, #f8cbf5, #e47be3);
+
+}
+
+.pink:hover
+{
+	
+background-image: linear-gradient(top, #e47be3, #f8cbf5);
+}
+.pink:active
+{
+	
+background-image: linear-gradient(top, #e47be3, #f8cbf5);
+box-shadow: 0 0 0 4px #f2f5f7, inset 0px 6px 5px -7px #333;
+	
+}
+
+/* Два варианта обводки вокруг полей */
+
+.v1:focus
+{	
+	outline:none;
+	border: #7dc6dd 1px solid;	
+	box-shadow: 0 0 0 4px #e0f1fc;
+
+}
+
+.v2:focus
+{	
+	outline:none;
+	border: #ea82e6 1px solid;	
+	box-shadow: 0 0 0 4px #fce0fb;
+
+}
+/* Цвет ссылки под формой  */
+.click1
+{
+	color:#cbebf6;	
+}
+.click2
+{
+	color:#c949c5;
+}
+
+/* Два бэкграунда */
+.bg
+{
+		background:url('../images/blue.png') ;
+}
+.pg
+{
+		background:url('../images/pink.png') ;
+	
+}
+/* Два варианта обводки вокруг формы */
+.bord1
+{
+	box-shadow: 0 0px 7px -2px #666666, 0 0px 0px 7px rgba(107, 151, 173, 0.4), 0 2px 4px -3px #ffffff;;
+}
+
+
+.bord2
+{
+	box-shadow: 0 0px 7px -2px #666666, 0 0px 0px 7px rgba(255, 216, 255, 0.4);
+}
+
+
+
+
+
+
+
+
+
+
+
+
