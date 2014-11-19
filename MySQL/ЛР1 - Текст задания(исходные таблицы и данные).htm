@@ -1,0 +1,650 @@
+<html><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=KOI8-R">
+<meta name="Generator" content="Microsoft Word 97">
+<title>Лабораторная работа 1</title>
+</head><body>
+
+<b><font size="4" face="Times New Roman"><p align="CENTER">Лабораторная 
+работа 1</p>
+</font><font size="4"><p align="CENTER"></p>
+</font><font size="4" face="Times New Roman"><p align="CENTER">СОЗДАНИЕ И
+ МОДИФИКАЦИЯ ТАБЛИЦ БАЗЫ ДАННЫХ</p>
+</font><font size="4"><p align="CENTER"></p>
+</font><font size="4" face="Times New Roman"></font></b><p 
+align="CENTER"><b><font size="4" face="Times New Roman">Цель работы</font></b></p>
+<b><font size="4" face="Times New Roman"></font></b><font size="4" 
+face="Times New Roman"></font><font size="4"><p>                   </p>
+</font><font size="4" face="Times New Roman"><p align="JUSTIFY">Создать 
+схему базы данных, ознакомиться с возможностями интерактивной программы <i>phpPgAdmin</i>,
+ создать с ее помощью набор таблиц в ней и заполнить таблицы данными для
+ последующей работы.</p>
+</font><font size="4">
+</font><b><font size="4" face="Times New Roman"></font></b><p 
+align="CENTER"><b><font size="4" face="Times New Roman">Содержание 
+работы и методические указания  к ее выполнению</font></b></p>
+<b><font size="4" face="Times New Roman"></font></b><font size="4" 
+face="Times New Roman"></font><font size="4">
+</font><p><font size="4">1. Ознакомиться с правилами работы и структурой
+ меню интерактивной программы <i>phpPgAdmin (Приложение 1)</i>.</font></p>
+<p><font size="4">2. Изучить набор команд языка SQL, связанный с 
+созданием базы данных, созданием, модификацией структуры таблиц и их 
+удалением, вставкой, модификацией и удалением записей таблиц <i>(Приложение
+ 2)</i>:</font></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p><font size="4"><i>create database</i> - создание базы данных;</font></p>
+<p><font size="4"><i>close database</i> - закрытие файлов текущей бызы 
+данных;</font></p>
+<p><font size="4"><i>drop database</i> - удаление базы данных;</font></p>
+<p><font size="4"><i>create schema</i> - создание схемы базы данных;</font></p>
+<p><font size="4"><i>create table</i> - создание таблицы базы данных;</font></p>
+<p><font size="4"><i>alter tabl</i>e - модификация структуры базы 
+данных;</font></p>
+<p><font size="4"><i>drop table</i> - удаление таблицы базы данных;</font></p>
+<p><font size="4"><i>insert</i> - добавление одной или нескольких строк в
+ таблицу;</font></p>
+<p><font size="4"><i>delete</i> - удаление одной или нескольких строк из
+ таблицы;</font></p>
+<p><font size="4"><i>update</i> - модификация одной или нескольких строк
+ таблицы.</font></p>
+<p align="JUSTIFY"><font size="4">3. Из командной строки в существующей 
+базе данных <b>students</b> командой </font></p>
+<dir>
+<p><font size="4"><i>new_schema [имя схемы] [имя базы данных]</i></font></p>
+</dir>
+<p align="JUSTIFY"><font size="4">создать схему базы данных с 
+произвольным именем (имя базы данных <b>students</b>).</font></p>
+<p align="JUSTIFY"><font size="4">4. Используя программу <i>phpPgAdmin </i>в
+ созданной схеме создать четыре таблицы. При создании таблиц выполнить 
+следующие условия:</font></p>
+<p align="JUSTIFY"><font size="4">- поля номер_поставщика,  
+номер_детали, номер_изделия во всех</font><font size="4"> </font><font 
+size="4" face="Times New Roman">таблицах имеет символьный тип и длину 6;</font></p>
+<p align="JUSTIFY"><font size="4" face="Times New Roman">- поля рейтинг,
+ вес и количество имеют целочисленный тип;</font></p>
+<p align="JUSTIFY"><font size="4" face="Times New Roman">- поля фамилия,
+  город (поставщика, детали или изделия), название (детали или изделия) 
+имеют символьный тип и длину 20;</font></p>
+<p align="JUSTIFY"><font size="4" face="Times New Roman">- ни для одного
+ поля не предусматривается  использование  индексов;</font></p>
+<p align="JUSTIFY"><font size="4" face="Times New Roman">- для всех 
+полей допускаются значения NULL и значения-дубликаты, кроме поля 
+номер_поставщика из таблицы S, номер детали из таблицы P, номер изделия 
+из таблицы J.</font></p>
+<p><font size="4" face="Times New Roman">Таблицы S и P создать 
+средствами системы меню программы <i>phpPgAdmin</i>, таблицы J и SPJ 
+создать, написав и выполнив соответствующие запросы для создания таблиц 
+(команда <i>Create table</i>).</font></p>
+<font size="4" face="Times New Roman"></font><font size="4" face="Times 
+New Roman"></font><p><font size="4" face="Times New Roman">Убедиться в 
+успешности выполненных действий. При необходимости исправить ошибки.</font></p>
+
+<p align="JUSTIFY"><font size="4" face="Times New Roman">5. Записать и 
+выполнить совокупность запросов  для  занесения</font><font size="4"> </font><font
+ size="4" face="Times New Roman">вышеприведенных данных в созданные 
+таблицы</font></p>
+<p align="CENTER"><font size="4" face="Times New Roman"><i>insert into 
+имя_таблицы [(поле [,поле]...)]</i></font></p>
+<p align="CENTER"><font size="4" face="Times New Roman"><i>values 
+(константа [,константа]...)</i></font></p>
+<font size="4" face="Times New Roman"></font><font size="4"><p 
+align="JUSTIFY"></p>
+</font><font size="4" face="Times New Roman"><p align="CENTER">Таблица 
+поставщиков (S)</p>
+</font><font size="4"></font>
+<table border="0" cellpadding="4" cellspacing="0" width="486">
+<tbody><tr><td valign="TOP" width="32%">
+<font size="4" face="Times New Roman"></font><p align="CENTER"><font 
+size="4" face="Times New Roman">Hомеp поставщика</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4" face="Times New Roman"></font><p align="CENTER"><font 
+size="4" face="Times New Roman">Фамилия</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4" face="Times New Roman"></font><p align="CENTER"><font 
+size="4" face="Times New Roman">Рейтинг</font></p></td>
+<td valign="TOP" width="21%">
+<font size="4" face="Times New Roman"></font><p align="CENTER"><font 
+size="4" face="Times New Roman">Гоpод</font></p></td>
+</tr>
+<tr><td valign="TOP" width="32%">
+<font size="4"></font><p align="CENTER"><font size="4">S1</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Смит</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">20</font></p></td>
+<td valign="TOP" width="21%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Лондон</font></p></td>
+</tr>
+<tr><td valign="TOP" width="32%">
+<font size="4"></font><p align="CENTER"><font size="4">S2</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Джонс</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">10</font></p></td>
+<td valign="TOP" width="21%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Париж</font></p></td>
+</tr>
+<tr><td valign="TOP" width="32%">
+<font size="4"></font><p align="CENTER"><font size="4">S3</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Блейк</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">30</font></p></td>
+<td valign="TOP" width="21%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Париж</font></p></td>
+</tr>
+<tr><td valign="TOP" width="32%">
+<font size="4"></font><p align="CENTER"><font size="4">S4</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Кларк</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">20</font></p></td>
+<td valign="TOP" width="21%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Лондон</font></p></td>
+</tr>
+<tr><td valign="TOP" width="32%">
+<font size="4"></font><p align="CENTER"><font size="4">S5</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Адамс</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">30</font></p></td>
+<td valign="TOP" width="21%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Афины</font></p></td>
+</tr>
+</tbody></table>
+
+<font size="4">
+</font><font size="4" face="Times New Roman"><p align="CENTER">Таблица 
+деталей (P)</p>
+</font><font size="4"></font>
+<table border="0" cellpadding="4" cellspacing="0" width="486">
+<tbody><tr><td valign="TOP" width="25%">
+<font size="4" face="Times New Roman"></font><p align="CENTER"><font 
+size="4" face="Times New Roman">Номер детали</font></p></td>
+<td valign="TOP" width="22%">
+<font size="4" face="Times New Roman"></font><p align="CENTER"><font 
+size="4" face="Times New Roman">Название</font></p></td>
+<td valign="TOP" width="19%">
+<font size="4" face="Times New Roman"></font><p align="CENTER"><font 
+size="4" face="Times New Roman">Цвет</font></p></td>
+<td valign="TOP" width="16%">
+<font size="4" face="Times New Roman"></font><p align="CENTER"><font 
+size="4" face="Times New Roman">Вес</font></p></td>
+<td valign="TOP" width="17%">
+<font size="4" face="Times New Roman"></font><p align="CENTER"><font 
+size="4" face="Times New Roman">Город</font></p></td>
+</tr>
+<tr><td valign="TOP" width="25%">
+<font size="4"></font><p align="CENTER"><font size="4">P1</font></p></td>
+<td valign="TOP" width="22%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Гайка</font></p></td>
+<td valign="TOP" width="19%">
+<font size="4" face="Times New Roman"></font><p align="CENTER"><font 
+size="4" face="Times New Roman">Красный</font></p></td>
+<td valign="TOP" width="16%">
+<font size="4"></font><p align="CENTER"><font size="4">12</font></p></td>
+<td valign="TOP" width="17%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Лондон</font></p></td>
+</tr>
+<tr><td valign="TOP" width="25%">
+<font size="4"></font><p align="CENTER"><font size="4">P2</font></p></td>
+<td valign="TOP" width="22%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Болт</font></p></td>
+<td valign="TOP" width="19%">
+<font size="4" face="Times New Roman"></font><p align="CENTER"><font 
+size="4" face="Times New Roman">Зеленый</font></p></td>
+<td valign="TOP" width="16%">
+<font size="4"></font><p align="CENTER"><font size="4">17</font></p></td>
+<td valign="TOP" width="17%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Париж</font></p></td>
+</tr>
+<tr><td valign="TOP" width="25%">
+<font size="4"></font><p align="CENTER"><font size="4">P3</font></p></td>
+<td valign="TOP" width="22%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Винт</font></p></td>
+<td valign="TOP" width="19%">
+<font size="4" face="Times New Roman"></font><p align="CENTER"><font 
+size="4" face="Times New Roman">Голубой</font></p></td>
+<td valign="TOP" width="16%">
+<font size="4"></font><p align="CENTER"><font size="4">17</font></p></td>
+<td valign="TOP" width="17%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Рим</font></p></td>
+</tr>
+<tr><td valign="TOP" width="25%">
+<font size="4"></font><p align="CENTER"><font size="4">P4</font></p></td>
+<td valign="TOP" width="22%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Винт</font></p></td>
+<td valign="TOP" width="19%">
+<font size="4" face="Times New Roman"></font><p align="CENTER"><font 
+size="4" face="Times New Roman">Красный</font></p></td>
+<td valign="TOP" width="16%">
+<font size="4"></font><p align="CENTER"><font size="4">14</font></p></td>
+<td valign="TOP" width="17%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Лондон</font></p></td>
+</tr>
+<tr><td valign="TOP" width="25%">
+<font size="4"></font><p align="CENTER"><font size="4">P5</font></p></td>
+<td valign="TOP" width="22%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Кулачок</font></p></td>
+<td valign="TOP" width="19%">
+<font size="4" face="Times New Roman"></font><p align="CENTER"><font 
+size="4" face="Times New Roman">Голубой</font></p></td>
+<td valign="TOP" width="16%">
+<font size="4"></font><p align="CENTER"><font size="4">12</font></p></td>
+<td valign="TOP" width="17%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Париж</font></p></td>
+</tr>
+<tr><td valign="TOP" width="25%">
+<font size="4"></font><p align="CENTER"><font size="4">P6</font></p></td>
+<td valign="TOP" width="22%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Блюм</font></p></td>
+<td valign="TOP" width="19%">
+<font size="4" face="Times New Roman"></font><p align="CENTER"><font 
+size="4" face="Times New Roman">Красный</font></p></td>
+<td valign="TOP" width="16%">
+<font size="4"></font><p align="CENTER"><font size="4">19</font></p></td>
+<td valign="TOP" width="17%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Лондон</font></p></td>
+</tr>
+</tbody></table>
+
+<font size="4">
+</font><font size="4" face="Times New Roman"><p align="CENTER">Таблица 
+изделий (J)</p>
+</font><font size="4"></font>
+<table border="0" cellpadding="4" cellspacing="0" width="401">
+<tbody><tr><td valign="TOP" width="34%">
+<font size="4" face="Times New Roman"></font><p align="CENTER"><font 
+size="4" face="Times New Roman">Номер изделия</font></p></td>
+<td valign="TOP" width="40%">
+<font size="4" face="Times New Roman"></font><p align="CENTER"><font 
+size="4" face="Times New Roman">Название</font></p></td>
+<td valign="TOP" width="26%">
+<font size="4" face="Times New Roman"></font><p align="CENTER"><font 
+size="4" face="Times New Roman">Город</font></p></td>
+</tr>
+<tr><td valign="TOP" width="34%">
+<font size="4"></font><p align="CENTER"><font size="4">J1</font></p></td>
+<td valign="TOP" width="40%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Жесткий диск</font></p></td>
+<td valign="TOP" width="26%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Париж</font></p></td>
+</tr>
+<tr><td valign="TOP" width="34%">
+<font size="4"></font><p align="CENTER"><font size="4">J2</font></p></td>
+<td valign="TOP" width="40%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Перфоратор</font></p></td>
+<td valign="TOP" width="26%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Рим</font></p></td>
+</tr>
+<tr><td valign="TOP" width="34%">
+<font size="4"></font><p align="CENTER"><font size="4">J3</font></p></td>
+<td valign="TOP" width="40%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Считыватель</font></p></td>
+<td valign="TOP" width="26%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Афины</font></p></td>
+</tr>
+<tr><td valign="TOP" width="34%">
+<font size="4"></font><p align="CENTER"><font size="4">J4</font></p></td>
+<td valign="TOP" width="40%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Принтер</font></p></td>
+<td valign="TOP" width="26%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Афины</font></p></td>
+</tr>
+<tr><td valign="TOP" width="34%">
+<font size="4"></font><p align="CENTER"><font size="4">J5</font></p></td>
+<td valign="TOP" width="40%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Флоппи-диск</font></p></td>
+<td valign="TOP" width="26%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Лондон</font></p></td>
+</tr>
+<tr><td valign="TOP" width="34%">
+<font size="4"></font><p align="CENTER"><font size="4">J6</font></p></td>
+<td valign="TOP" width="40%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Терминал</font></p></td>
+<td valign="TOP" width="26%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Осло</font></p></td>
+</tr>
+<tr><td valign="TOP" width="34%">
+<font size="4"></font><p align="CENTER"><font size="4">J7</font></p></td>
+<td valign="TOP" width="40%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Лента</font></p></td>
+<td valign="TOP" width="26%">
+<font size="4" face="Times New Roman"></font><p><font size="4" 
+face="Times New Roman">Лондон</font></p></td>
+</tr>
+</tbody></table>
+
+<font size="4"><p align="CENTER"></p>
+</font><font size="4" face="Times New Roman"><p align="CENTER">Таблица 
+поставок (SPJ)</p>
+</font><font size="4"></font>
+<table border="0" cellpadding="4" cellspacing="0" width="524">
+<tbody><tr><td valign="TOP" width="29%">
+<font size="4" face="Times New Roman"></font><p align="CENTER"><font 
+size="4" face="Times New Roman">Номер поставщика</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4" face="Times New Roman"></font><p align="CENTER"><font 
+size="4" face="Times New Roman">Номер детали</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4" face="Times New Roman"></font><p align="CENTER"><font 
+size="4" face="Times New Roman">Номер изделия</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4" face="Times New Roman"></font><p align="CENTER"><font 
+size="4" face="Times New Roman">Количество</font></p></td>
+</tr>
+<tr><td valign="TOP" width="29%">
+<font size="4"></font><p align="CENTER"><font size="4">S1</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4"></font><p align="CENTER"><font size="4">P1</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">J1</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">200</font></p></td>
+</tr>
+<tr><td valign="TOP" width="29%">
+<font size="4"></font><p align="CENTER"><font size="4">S1</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4"></font><p align="CENTER"><font size="4">P1</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">J4</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">700</font></p></td>
+</tr>
+<tr><td valign="TOP" width="29%">
+<font size="4"></font><p align="CENTER"><font size="4">S2</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4"></font><p align="CENTER"><font size="4">P3</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">J1</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">400</font></p></td>
+</tr>
+<tr><td valign="TOP" width="29%">
+<font size="4"></font><p align="CENTER"><font size="4">S2</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4"></font><p align="CENTER"><font size="4">P3</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">J2</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">200</font></p></td>
+</tr>
+<tr><td valign="TOP" width="29%">
+<font size="4"></font><p align="CENTER"><font size="4">S2</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4"></font><p align="CENTER"><font size="4">P3</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">J3</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">200</font></p></td>
+</tr>
+<tr><td valign="TOP" width="29%">
+<font size="4"></font><p align="CENTER"><font size="4">S2</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4"></font><p align="CENTER"><font size="4">P3</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">J4</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">500</font></p></td>
+</tr>
+<tr><td valign="TOP" width="29%">
+<font size="4"></font><p align="CENTER"><font size="4">S2</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4"></font><p align="CENTER"><font size="4">P3</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">J5</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">600</font></p></td>
+</tr>
+<tr><td valign="TOP" width="29%">
+<font size="4"></font><p align="CENTER"><font size="4">S2</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4"></font><p align="CENTER"><font size="4">P3</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">J6</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">400</font></p></td>
+</tr>
+<tr><td valign="TOP" width="29%">
+<font size="4"></font><p align="CENTER"><font size="4">S2</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4"></font><p align="CENTER"><font size="4">P3</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">J7</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">800</font></p></td>
+</tr>
+<tr><td valign="TOP" width="29%">
+<font size="4"></font><p align="CENTER"><font size="4">S2</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4"></font><p align="CENTER"><font size="4">P5</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">J2</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">100</font></p></td>
+</tr>
+<tr><td valign="TOP" width="29%">
+<font size="4"></font><p align="CENTER"><font size="4">S3</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4"></font><p align="CENTER"><font size="4">P3</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">J1</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">200</font></p></td>
+</tr>
+<tr><td valign="TOP" width="29%">
+<font size="4"></font><p align="CENTER"><font size="4">S3</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4"></font><p align="CENTER"><font size="4">P4</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">J2</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">500</font></p></td>
+</tr>
+<tr><td valign="TOP" width="29%">
+<font size="4"></font><p align="CENTER"><font size="4">S4</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4"></font><p align="CENTER"><font size="4">P6</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">J3</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">300</font></p></td>
+</tr>
+<tr><td valign="TOP" width="29%">
+<font size="4"></font><p align="CENTER"><font size="4">S4</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4"></font><p align="CENTER"><font size="4">P6</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">J7</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">300</font></p></td>
+</tr>
+<tr><td valign="TOP" width="29%">
+<font size="4"></font><p align="CENTER"><font size="4">S5</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4"></font><p align="CENTER"><font size="4">P2</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">J2</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">200</font></p></td>
+</tr>
+<tr><td valign="TOP" width="29%">
+<font size="4"></font><p align="CENTER"><font size="4">S5</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4"></font><p align="CENTER"><font size="4">P2</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">J4</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">100</font></p></td>
+</tr>
+<tr><td valign="TOP" width="29%">
+<font size="4"></font><p align="CENTER"><font size="4">S5</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4"></font><p align="CENTER"><font size="4">P5</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">J5</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">500</font></p></td>
+</tr>
+<tr><td valign="TOP" width="29%">
+<font size="4"></font><p align="CENTER"><font size="4">S5</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4"></font><p align="CENTER"><font size="4">P5</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">J7</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">100</font></p></td>
+</tr>
+<tr><td valign="TOP" width="29%">
+<font size="4"></font><p align="CENTER"><font size="4">S5</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4"></font><p align="CENTER"><font size="4">P6</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">J2</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">200</font></p></td>
+</tr>
+<tr><td valign="TOP" width="29%">
+<font size="4"></font><p align="CENTER"><font size="4">S5</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4"></font><p align="CENTER"><font size="4">P1</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">J4</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">100</font></p></td>
+</tr>
+<tr><td valign="TOP" width="29%">
+<font size="4"></font><p align="CENTER"><font size="4">S5</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4"></font><p align="CENTER"><font size="4">P3</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">J4</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">200</font></p></td>
+</tr>
+<tr><td valign="TOP" width="29%">
+<font size="4"></font><p align="CENTER"><font size="4">S5</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4"></font><p align="CENTER"><font size="4">P4</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">J4</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">800</font></p></td>
+</tr>
+<tr><td valign="TOP" width="29%">
+<font size="4"></font><p align="CENTER"><font size="4">S5</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4"></font><p align="CENTER"><font size="4">P5</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">J4</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">400</font></p></td>
+</tr>
+<tr><td valign="TOP" width="29%">
+<font size="4"></font><p align="CENTER"><font size="4">S5</font></p></td>
+<td valign="TOP" width="24%">
+<font size="4"></font><p align="CENTER"><font size="4">P6</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">J4</font></p></td>
+<td valign="TOP" width="23%">
+<font size="4"></font><p align="CENTER"><font size="4">500</font></p></td>
+</tr>
+</tbody></table>
+
+<font size="4">
+</font><p align="JUSTIFY"><font size="4">6. Проверить результат 
+заполнения  таблиц,  написав  и  выполнив</font><font size="4"> </font><font
+ size="4" face="Times New Roman">простейший запрос</font></p>
+<p align="CENTER"><font size="4" face="Times New Roman"><i>select * from
+ имя_таблицы</i></font></p>
+<p align="JUSTIFY"><font size="4" face="Times New Roman">При наличии  
+ошибок  выполнить  корректировку, исправив либо удалив ошибочные строки 
+таблиц</font></p>
+<p align="CENTER"><font size="4" face="Times New Roman"><i>delete 
+имя_таблицы</i></font></p>
+<p align="CENTER"><font size="4" face="Times New Roman"><i>where 
+предикат</i></font></p>
+<p align="CENTER"><font size="4" face="Times New Roman"><i>update 
+имя_таблицы</i></font></p>
+<p align="CENTER"><font size="4" face="Times New Roman"><i>set 
+поле=выражение [,поле=выражение]...</i></font></p>
+<p align="CENTER"><font size="4" face="Times New Roman"><i>where 
+предикат</i></font></p>
+<p align="JUSTIFY"><font size="4" face="Times New Roman">Указанный 
+предикат должен однозначно специфицировать  удаляемые либо 
+модифицируемые строки посредством задания соответствующих условий, 
+которым должны удовлетворять отдельные поля строки.</font></p>
+<p align="JUSTIFY"><font size="4" face="Times New Roman">Если 
+посредством значений полей это сделать невозможно, можно прибегнуть к 
+использованию значений скрытого oid-столбца, представляющих собой  
+внутренние  номера записей.  Для этого необходимо предварительно 
+получить значения oid-столбца для занесенных строк</font></p>
+<p align="CENTER"><font size="4" face="Times New Roman"><i>select oid, *
+ from имя_таблицы</i></font></p>
+<p align="JUSTIFY"><font size="4" face="Times New Roman">а затем 
+требуемые значения использовать при формировании  условий в операторах 
+удаления либо модификации.</font></p>
+<p align="JUSTIFY"><font size="4" face="Times New Roman">7. Средствами  
+системы  меню  программы <i>phpPgAdmin</i> выполнить модификацию 
+структуры таблицы SPJ, добавив в нее поле с датой поставки.  Убедиться в
+ успешности выполненных действий. При необходимости исправить ошибки.</font></p>
+<p align="JUSTIFY"><font size="4" face="Times New Roman">Занести 
+произвольные даты постаки, использую меню программы <i>phpPgAdmin</i>.
+<b><p align="CENTER">Контрольные вопросы</p>
+</b></font></p><ol>
+
+<font size="4" face="Times New Roman"><li>Какие типы данных допустимы 
+при создании таблицы?</li>
+<li>Как  выполнить  создание таблицы средствами меню программы <i>phpPgAdmin</i>?</li>
+<li>Как  выполнить  создание таблицы средствами языка SQL?</li>
+<li>Как разделяются операторы SQL в случае нескольких операторов в 
+запросе?</li>
+<li>Каким образом выполнить простейшие операции вставки  строк данных в 
+таблицу средствами SQL?</li>
+<li>Каким образом выполнить  простейшие  операции  модификации строк 
+таблицы средствами SQL?</li>
+<li>Каким образом выполнить просмотр таблицы?</li>
+<li>Что такое oid-столбец?</li>
+<li>Как получить информацию  о  структуре  таблицы  в  рамках программы <i>phpPgAdmin</i>?</li>
+<li>Как задать ограничения на столбцы таблицы?</li>
+</font></ol>
+<font size="4" face="Times New Roman"></font></body></html>

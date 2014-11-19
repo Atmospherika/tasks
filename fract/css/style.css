@@ -1,0 +1,141 @@
+
+body
+{
+background:url(../images/square_bg.png) ;
+}
+#content
+{
+margin:100px auto 0px auto;
+background:white;
+width:600px;
+min-height:300px;
+padding:15px;
+border-radius:6px;
+box-shadow: 0 0 12px rgb(203, 203, 203);
+}
+.non
+{
+display:none;
+}
+.sign, .fract, .eq, #computing, #result
+{
+display:inline-block;
+}
+.fract
+{
+margin-bottom:6px;
+}
+#nl
+{
+vertical-align:top;
+display: inline-block;
+margin-top: -29px;
+}
+#on, #under
+{
+
+width: 28px;
+margin-top: 15px;
+text-align: center;
+}
+input[type='text']
+{
+width: 28px;
+height: 30px;
+border: 1px solid rgba(156, 161, 166, 0.5);
+border-radius: 6px;
+text-align:center;
+}
+input[type='text']:focus
+{
+outline:none;
+border:rgba(5, 171, 70, 0.6) 1px solid;
+box-shadow: 0 0 1px rgba(186, 240, 167, 0.5); 
+}
+hr
+{
+border: 1px solid rgba(156, 161, 166, 0.5);
+}
+#hr
+{
+margin-top: 11px;
+}
+.sign
+{
+margin:0px 10px 0px 10px;
+vertical-align: top;
+margin-top: 23px;
+}
+.eq
+{
+margin: 34px 10px 0px 9px;
+vertical-align: top;
+
+}
+#add
+{
+display:block;
+background: rgb(204, 245, 204);
+border: 1px solid rgb(199, 219, 199);
+height: 35px;
+width: 135px;
+outline: none;
+color: rgb(88, 139, 123);
+margin-top: 50px;
+}
+#add:hover
+{
+background: rgb(204, 245, 217);
+}
+#add:active
+{
+background: rgb(183, 232, 198);
+}
+#result
+{
+margin-top: -14px;
+margin-left: -4px;
+}
+#title
+{
+text-align:center;
+width:100%;
+margin-bottom:30px;
+}
+#title h2
+{
+font-size:1.2em;
+}
+#error
+{	
+	position:absolute;
+	margin-top:-100px;
+	background-color:rgba(255,255,255,0.9);
+	height:50px;
+	width:99%;
+ 	border-bottom: 10px solid #eaeff3;
+ 	text-align: center;
+ 	box-shadow: 0px 0px 3px 1px #5d5d5d;
+	display: none;
+	
+}
+#exit
+{
+	width:10px;
+	height:9px;
+	background:url('../images/exit.png') no-repeat;
+	margin-top: 22px;
+	margin-right: 20px;
+	float: right;
+}
+#exit:hover
+{	width:10px;
+	height:9px;
+	background:url('../images/exitH.png') no-repeat;
+}
+#txt
+{	margin-top: 16px;
+	color: #e34848;
+	font: bold 1.2em Arial;
+	display: inline-block; 	
+}

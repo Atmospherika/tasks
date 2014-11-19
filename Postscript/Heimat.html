@@ -1,0 +1,81 @@
+<html>
+<head>
+<script type="text/javascript">
+var H1,W1;
+var w,h,x,y;
+function param()
+{
+x=parseInt(document.getElementById('x').value);
+y=parseInt(document.getElementById('y').value);
+w=parseInt(document.getElementById('w').value);
+h=parseInt(document.getElementById('h').value);
+}
+function initGraphics()
+{
+		doc = document.getElementById("canvas");
+		CTX = doc.getContext("2d");
+		H1 = doc.height;
+		W1 = doc.width;
+		CTX.clearRect(0,0,W1,H1);
+		CTX.strokeStyle='black';
+		CTX.strokeRect(0,0,W1,H1);
+}
+function ps()
+{
+param();
+var ps='';
+ps+="newpath";
+ps+="</br>"+x+" "+y+" moveto";
+ps+="</br>"+(x+w)+" "+y+" lineto";
+ps+="</br>"+(x+w)+" "+(y+h)+" lineto";
+ps+="</br>"+x+" "+(y+h)+" lineto";
+ps+="</br> closepath";
+ps+="</br> stroke";
+ps+="</br> newpath";
+ps+="</br>"+x+" "+(y+h)+" moveto";
+ps+="</br>"+(x+w/2)+" "+(y+h+Math.sqrt(Math.pow(w,2)-Math.pow(w/2,2))).toFixed(5)+" lineto";
+ps+="</br>"+(x+w)+" "+(y+h)+" lineto";
+ps+="</br> closepath";
+ps+="</br> stroke";
+document.getElementById('ps').innerHTML=ps;
+}
+function draw()
+	{
+	param();
+	initGraphics();
+	CTX.lineWidth=1;
+	CTX.beginPath();
+	CTX.moveTo(x,H1-y);
+	CTX.lineTo(x+w,H1-y);
+	CTX.lineTo(x+w,H1-y-h);
+	CTX.lineTo(x,H1-h-y);
+	CTX.closePath();
+	CTX.stroke();
+	CTX.beginPath();
+	CTX.moveTo(x,H1-h-y);
+    CTX.lineTo(x+w/2,H1-y-h-Math.sqrt(Math.pow(w,2)-Math.pow(w/2,2)));
+	CTX.lineTo(x+w, H1-y-h);
+	CTX.closePath();
+	CTX.stroke();
+	}
+</script>
+</head>
+<body onload="initGraphics()">
+x:<input type='text' id='x' /></br>
+y:<input type='text' id='y' /></br>
+w:<input type='text' id='w' /></br>
+h:<input type='text' id='h' /></br>
+<button id='draw' onclick='draw()' >Нарисовать</button></br>
+<button id='pst' onclick='ps()' >Показать PS код</button></br>
+<table border="0">
+<tr>
+<td>
+<canvas id='canvas'  width='600' height='400'>
+</canvas></td>
+<td style="vertical-align:top;">
+<b>PS код:</b></br>
+<div id='ps'></div>
+<td>
+</tr>
+</body>
+</html>
